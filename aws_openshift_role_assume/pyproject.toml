@@ -44,9 +44,9 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/your-org/aws-openshift-role-assume"
-Repository = "https://github.com/your-org/aws-openshift-role-assume"
-Issues = "https://github.com/your-org/aws-openshift-role-assume/issues"
+Homepage = "https://github.com/cbtham/aws_openshift_role_assume"
+Repository = "https://github.com/cbtham/aws_openshift_role_assume"
+Issues = "https://github.com/cbtham/aws_openshift_role_assume/issues"
 
 [tool.hatch.version]
 path = "aws_openshift_role_assume/__init__.py"

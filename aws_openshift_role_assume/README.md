@@ -63,8 +63,8 @@ pip install aws-openshift-role-assume
 - From source
 
 ```bash
-git clone https://github.com/your-org/aws-openshift-role-assume.git
-cd aws-openshift-role-assume
+git clone https://github.com/cbtham/aws_openshift_role_assume.git
+cd aws_openshift_role_assume
 pip install ./
 ```
 
