@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aws-openshift-role-assume"
+dynamic = ["version"]
+description = "Frictionless AWS IAM role assumption for OpenShift AI workbenches via STS session tagging"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "Apache-2.0"
+authors = [
+    { name = "Data Platform Team" },
+]
+keywords = [
+    "aws",
+    "openshift",
+    "iam",
+    "sts",
+    "assume-role",
+    "irsa",
+    "kubeflow",
+    "openshift-ai",
+    "rhods",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Security",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "boto3>=1.20.0",
+    "botocore>=1.23.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-org/aws-openshift-role-assume"
+Repository = "https://github.com/your-org/aws-openshift-role-assume"
+Issues = "https://github.com/your-org/aws-openshift-role-assume/issues"
+
+[tool.hatch.version]
+path = "aws_openshift_role_assume/__init__.py"

@@ -1,0 +1,30 @@
+apiVersion: kubeflow.org/v1alpha1
+kind: PodDefault
+metadata:
+  name: inject-aws-irsa
+  namespace: <data-science-project>
+spec:
+  desc: "Injects AWS IRSA Token into Workbenches"
+  selector:
+    matchLabels:
+      opendatahub.io/dashboard: "true"
+  env:
+    - name: AWS_ROLE_ARN
+      value: "arn:aws:iam::123456789012:role/OpenShiftAIBaseRole"
+    - name: AWS_WEB_IDENTITY_TOKEN_FILE
+      value: "/var/run/secrets/eks.amazonaws.com/serviceaccount/token"
+    - name: AWS_DEFAULT_REGION
+      value: "us-east-1"
+  volumeMounts:
+    - mountPath: /var/run/secrets/eks.amazonaws.com/serviceaccount
+      name: aws-iam-token
+      readOnly: true
+  volumes:
+    - name: aws-iam-token
+      projected:
+        defaultMode: 420
+        sources:
+          - serviceAccountToken:
+              audience: sts.amazonaws.com
+              expirationSeconds: 86400
+              path: token

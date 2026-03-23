@@ -1,0 +1,29 @@
+# Dev / local artifacts
+/dev/
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment
+.env
+*.pem
+*.key
+*.crt
+*.pub
+
+# Jupyter
+.ipynb_checkpoints/

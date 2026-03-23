@@ -1,0 +1,41 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowUser1BronzeSilver",
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket",
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::rh-dynamic-role-bronze-2",
+                "arn:aws:s3:::rh-dynamic-role-bronze-2/*",
+                "arn:aws:s3:::rh-dynamic-role-silver-2",
+                "arn:aws:s3:::rh-dynamic-role-silver-2/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/user": "user1"
+                }
+            }
+        },
+        {
+            "Sid": "AllowUser2Diamond",
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket",
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::rh-dynamic-role-diamond-2",
+                "arn:aws:s3:::rh-dynamic-role-diamond-2/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:PrincipalTag/user": "user2"
+                }
+            }
+        }
+    ]
+}

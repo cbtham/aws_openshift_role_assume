@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: assume-role-sa
+  namespace: <data-science-project>
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::123456789012:role/OpenShiftAIBaseRole
