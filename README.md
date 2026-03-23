@@ -1,4 +1,4 @@
-# AWS OpenShift Role Assume
+# AWS OpenShift Dynamic Role Assume in Workbench
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![PyPI version](https://img.shields.io/pypi/v/aws-openshift-role-assume.svg)](https://pypi.org/project/aws-openshift-role-assume/)
